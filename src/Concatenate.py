@@ -17,12 +17,21 @@
 #  jgs  '-`\\`__                  individuals, organizations, or both;
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
+import sys
+
+from Usage import usage
 
 
 def cat(args):
     """concatenate files and print on the standard output"""
-    print("TODO: concatenate files and print on the standard output")
+    if len(args) == 0:
+        usage("Too few arguments", 'cat')
 
+    for file in args:
+        f = open(file)
+        for line in f:
+            print(line, end="")
+        f.close()
 
 def tac(args):
     """concatenate and print files in reverse"""
@@ -31,4 +40,22 @@ def tac(args):
 
 def nl(args):
     """number lines of files"""
-    print("TODO: number lines of files")
+    if len(args) == 0:
+        usage("Too few arguments", 'nl')
+
+    include_blank_lines = False
+    if args[0] == '-ba':
+        include_blank_lines = True
+        args = args[1:]
+
+    line_number = 1
+
+    for file in args:
+        f = open(file)
+        for line in f:
+            if line.strip() == '' and not include_blank_lines:
+                print(line, end='')
+            else:
+                print(f"{line_number}\t{line}", end='')
+                line_number += 1
+        f.close()

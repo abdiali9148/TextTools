@@ -10,12 +10,13 @@ Phase 0: Requirements Analysis
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+    *   print a maximum of 10 lines. just like cat if it is less than 10
 *   [ ] Explain the problem this program aims to solve.
-    *   Describe what a *good* solution looks like.
+    *   after 10 lines it automatically stops and doesnt cause an erro
     *   List what you already know how to do.
+      * I already know how to do cat, so i will do a for loop of 10 times and it stops after that.
     *   Point out any challenges that you can foresee.
+      * i dont think i know how to do a for loop for files.
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
 *   [ ] Explain what form the program's output will take.
 
@@ -31,11 +32,24 @@ Deliver:
 *   [ ] Pseudocode that captures how each function works in plain language.
     *   Pseudocode != Python.  Do not paste your finished source code into this part of the plan.
     *   Describe important functions and classes in your program.  Include such details as:
-        *   Names of functions/classes
-        *   Parameter names and their types
-        *   Types of data returned by functions
+    - ```python
+      input: list of filenames
+      output: prints a maximum of 10 lines
+      
+      =============
+      if the arguments contain -n:
+        make whatever is after that the count
+      if not:
+        make count 10
+      
+      open the file
+        for over line in it print the line
+        have a count so it stops at the count
+      ```
+      
 *   [ ] Explain what happens in the face of good and bad input.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
+      * in the good part of the input, it stops at whatever the count is. in the bad part i dont know how to raise exceptions with the options.
 
 
 Phase 2: Implementation
@@ -48,7 +62,7 @@ Deliver:
 
 *   [ ] Working code in the `src/` folder.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
-    *   e.g. what you learned, what didn't go according to plan.
+    *   i dont want to put any error messages in the tool function but that seems to be the only way i can. 
 
 
 Phase 3: Testing and Debugging
@@ -60,6 +74,5 @@ Your grade depends on how your program performs when run from the command line. 
 Deliver:
 
 *   [ ] A set of test cases that you have personally run on your computer.
-    *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
-    *   Include a description of what happened for *each test case*.
-    *   For any bugs discovered, describe their cause and remedy.
+    *   I tested all the example code you gave me.
+    * the only problem i ran into was the error messages. im not sure if i put it in the tool function.

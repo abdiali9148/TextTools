@@ -17,11 +17,37 @@
 #  jgs  '-`\\`__                  individuals, organizations, or both;
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
+from Usage import usage
 
 
 def head(args):
     """output the first part of files"""
-    print("TODO: output the first part of files")
+    if len(args) == 0:
+        usage("Too few arguments", 'head')
+    if args[0] == '-n':
+        if len(args) < 2 or not args[1].isdigit():
+            usage("Number of lines is required", 'head')
+        count = int(args[1])
+        args.pop(0)
+        args.pop(0)
+        if len(args) == 0:
+            usage("At least one filename is required", 'head')
+    else:
+        count = 10
+
+    multiple_files = len(args) > 1
+
+    for file in args:
+        if multiple_files:
+            print("\n")
+            print("==> {} <==".format(file))
+        f = open(file)
+        i = 0
+        for line in f:
+            if i < count:
+                print(line, end='')
+                i += 1
+        f.close()
 
 
 def tail(args):
