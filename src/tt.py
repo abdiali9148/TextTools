@@ -28,65 +28,7 @@ from Grep import grep
 from Partial import head, tail
 from Sorting import sort
 from WordCount import wc
-
-  # DELETE ME
 from Usage import usage
-
-
-# Print statement debugging: display command line arguments
-# This block of code may be removed before you submit your project
-#
-# You can keep this block so long as the output goes to sys.stderr
-# for i, arg in enumerate(sys.argv):
-#     num = f"arg #{i})"
-#     print(f"{num:<8} {arg}", file=sys.stderr)
-# print(file=sys.stderr)
-
-
-
-# if len(sys.argv) < 2:
-#     usage()
-#     sys.exit(1)
-#
-# if tool == 'cat':
-#     if len(args) < 1:
-#         usage("Too few arguments", 'cat')
-#         sys.exit(1)
-#     cat(args)
-# if tool == 'head':
-#     if len(args) < 1:
-#         usage("Too few arguments", 'head')
-#         sys.exit(1)
-#     if args[0] == '-n':
-#         if len(args) < 2:
-#             usage("Number of lines is required", 'head')
-#             sys.exit(1)
-#         if not args[1].isdigit():
-#             usage("Number of lines is required", 'head')
-#             sys.exit(1)
-#     head(args)
-# if tool == 'grep':
-#     if len(args) < 1:
-#         usage("Please provide a pattern and at least one filename", 'grep')
-#         sys.exit(1)
-#     if args[0] == '-v':
-#         if len(args) < 3:
-#             usage("Please provide a pattern and at least one filename", 'grep')
-#             sys.exit(1)
-#     if not args:
-#         usage("Please provide a pattern and at least one filename", "grep")
-#     grep(args)
-# if tool == 'nl':
-#     if len(args) < 1:
-#         usage("Too few arguments", 'nl')
-#         sys.exit(1)
-#     nl(args)
-# if tool == 'wc':
-#     if len(args) < 1:
-#         usage("Too few arguments", 'nl')
-#         sys.exit(1)
-#     wc(args)
-
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:

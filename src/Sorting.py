@@ -17,8 +17,18 @@
 #  jgs  '-`\\`__                  individuals, organizations, or both;
 #           `-._(                 further, they may be artificially or
 #                                 naturally sentient (or close enough).
+from Usage import usage
 
 
 def sort(args):
-    """sort lines of text files"""
-    print("TODO: sort lines of text files")
+    if len(args) == 0:
+        usage("Too few arguments", 'sort')
+
+    for file in args:
+        f = open(file)
+        lines = f.readlines()
+        sorted_lines = sorted(lines)
+        for line in sorted_lines:
+            print(line, end='')
+
+        f.close()

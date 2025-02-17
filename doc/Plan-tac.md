@@ -10,14 +10,24 @@ Phase 0: Requirements Analysis
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+    *   just like cat but do everything in reverse
 *   [ ] Explain the problem this program aims to solve.
-    *   Describe what a *good* solution looks like.
-    *   List what you already know how to do.
-    *   Point out any challenges that you can foresee.
+        * print files onto shell in reversed order 
+      *   Describe what a *good* solution looks like.
+          * when the files are in reversed order.
+      *   List what you already know how to do.
+          * I already know how to do cat but im pretty sure i can just call a "reversed function" 
+      *   Point out any challenges that you can foresee.
+          * nothing really 
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
+    * program has 2 inputs.
+    * the file names
+    * and the data in the files names. use open() to access.
 *   [ ] Explain what form the program's output will take.
+  * When good arguments are given to the program, the output is the concatenation of the contents of the named files 
+  * If the file list is 0, display an error message. 
+  * If a filename is spelled wrong, just let the program crash. 
+  * If a file is inaccessible, just let the program crash.
 
 
 Phase 1: Design
@@ -31,12 +41,18 @@ Deliver:
 *   [ ] Pseudocode that captures how each function works in plain language.
     *   Pseudocode != Python.  Do not paste your finished source code into this part of the plan.
     *   Describe important functions and classes in your program.  Include such details as:
-        *   Names of functions/classes
-        *   Parameter names and their types
-        *   Types of data returned by functions
+        *   ```python
+            for every file in the argument
+                open the file
+                i found this in word count, if i use f.readlines() = lines.
+                    it reads every line
+                for every line in the lines reverse
+                    print the line
+
+        ```
 *   [ ] Explain what happens in the face of good and bad input.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
-
+        * in good inputs, it works, in bad inputs it gives an error
 
 Phase 2: Implementation
 -----------------------
@@ -49,6 +65,7 @@ Deliver:
 *   [ ] Working code in the `src/` folder.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
     *   e.g. what you learned, what didn't go according to plan.
+      *  every thing went well.
 
 
 Phase 3: Testing and Debugging
@@ -60,6 +77,4 @@ Your grade depends on how your program performs when run from the command line. 
 Deliver:
 
 *   [ ] A set of test cases that you have personally run on your computer.
-    *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
-    *   Include a description of what happened for *each test case*.
-    *   For any bugs discovered, describe their cause and remedy.
+    * nothing really was bothering me, this was the easiest by far.

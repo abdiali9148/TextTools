@@ -33,9 +33,16 @@ def cat(args):
             print(line, end="")
         f.close()
 
+
 def tac(args):
     """concatenate and print files in reverse"""
-    print("TODO: concatenate and print files in reverse")
+    if len(args) == 0:
+        usage("Too few arguments", 'tac')
+    for file in args:
+        f = open(file)
+        lines = f.readlines()
+        for line in reversed(lines):
+            print(line, end='')
 
 
 def nl(args):

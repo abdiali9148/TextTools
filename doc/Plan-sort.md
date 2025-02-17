@@ -10,8 +10,7 @@ Phase 0: Requirements Analysis
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+    *  He said to not use my own sorting tool. sort in lexical  order
 *   [ ] Explain the problem this program aims to solve.
     *   Describe what a *good* solution looks like.
     *   List what you already know how to do.

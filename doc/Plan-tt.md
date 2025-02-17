@@ -10,14 +10,14 @@ Phase 0: Requirements Analysis
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+    *   if there is less than one argument call usage
+    *   otherwise call the function if calld.
+    *   if wrong call usage
 *   [ ] Explain the problem this program aims to solve.
-    *   Describe what a *good* solution looks like.
-    *   List what you already know how to do.
-    *   Point out any challenges that you can foresee.
+    *   usage works well and the functions are all called well.
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
 *   [ ] Explain what form the program's output will take.
+    *   the arguments are the function name, then whatever the functions take.
 
 
 Phase 1: Design
@@ -30,10 +30,12 @@ Deliver:
 
 *   [ ] Pseudocode that captures how each function works in plain language.
     *   Pseudocode != Python.  Do not paste your finished source code into this part of the plan.
-    *   Describe important functions and classes in your program.  Include such details as:
-        *   Names of functions/classes
-        *   Parameter names and their types
-        *   Types of data returned by functions
+    *  ```python
+       i read over one of the .py files the teacher made.
+       the easiest way was to
+       call main.
+            if len of sys.args i less than 0 call usage
+                else see if the names of the file match. then make the paramaters of the arguments everything after that.
 *   [ ] Explain what happens in the face of good and bad input.
     *   As you think of specific examples, write them under **Phase 3** so you can run them as soon as the program is functional.
 
@@ -92,15 +94,11 @@ Deliver:
 
 *   [ ] Write brief and honest answers to these questions:
     *   What parts of your program are sloppily written and hard to understand?
-        *   Are there parts of your program which you aren't quite sure how/why they work?
-        *   If a bug is reported in a few months, how long would it take you to find the cause?
+        *   only the last 2 files where it was easier to make the arguments into their own list to call it easier.
     *   Will your documentation make sense to...
-        *   ...anybody besides yourself?
-        *   ...yourself in six month's time?
+        *  only the teacher.
     *   How easy will it be to add a new feature to this program in a year?
     *   Will your program continue to work after upgrading...
-        *   ...your computer's hardware?
-        *   ...the operating system?
-        *   ...to the next version of Python?
+        *   YESSSS
 *   [ ] Make one final commit and push your **completed** Software Development Plan to GitLab.
 *   [ ] Respond to the **Project Reflection Survey** on Canvas.
